@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "video-frame-renderer": ["../dist/createRenderer.js"]
+        },
+
+        /* Linting */
+        "strict": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+    },
+    "include": ["src/**/*"]
+}

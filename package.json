@@ -1,0 +1,33 @@
+{
+  "name": "video-frame-renderer",
+  "description": "VideoFrame renderer on webgl which accepts various pixel formats",
+  "keywords": [
+    "WebGl",
+    "VideoFrame",
+    "renderer",
+    "draw",
+    "pixel formats",
+    "RGBA",
+    "I420",
+    "NV12"
+  ],
+  "author": {
+    "name": "Guntis Smaukstelis",
+    "email": "guntis.smaukstelis@gmail.com"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "dist/createRenderer.js",
+  "types": "dist/createRenderer.d.ts",
+  "main": "dist/createRenderer.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
+  }
+}
