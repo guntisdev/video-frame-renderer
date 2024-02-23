@@ -1,13 +1,16 @@
-import { defineConfig } from 'vite';
-import path from 'path';
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  root: path.resolve(__dirname, 'example'),
-  server: {},
-  plugins: [],
-  resolve: {
-    alias: {
-      'video-frame-renderer': path.resolve(__dirname, './dist/createRenderer.js'),
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/createRenderer.ts'),
+      name: 'video-frame-renderer',
+      formats: ['es'],
+      fileName: 'createRenderer'
     },
+    outDir: resolve(__dirname, 'dist')
   },
-});
+  plugins: [dts()]
+})

@@ -27,12 +27,13 @@
     "LICENSE"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc",
+    "dev": "vite --config example/vite.config.js",
+    "build": "vite build",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
   }
 }
