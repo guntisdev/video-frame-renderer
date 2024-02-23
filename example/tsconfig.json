@@ -2,8 +2,10 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "video-frame-renderer": ["../dist/createRenderer.js"]
+            "video-frame-renderer": ["../dist/createRenderer"]
         },
+        "module": "ESNext",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
 
         /* Linting */
         "strict": false,
