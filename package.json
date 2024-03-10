@@ -15,6 +15,11 @@
     "name": "Guntis Smaukstelis",
     "email": "guntis.smaukstelis@gmail.com"
   },
+  "homepage": "https://github.com/guntisdev/video-frame-renderer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guntisdev/video-frame-renderer.git"
+  },
   "license": "MIT",
   "version": "0.0.2",
   "type": "module",
