@@ -50,25 +50,21 @@ const fragmentShaderSource = `
     uniform sampler2D samplerY;
     uniform sampler2D samplerUV;
     varying vec2 v_texCoord;
-
-    float sContrastValue = 1.5;
-    float sBrightnessValue = -0.1;
-
     void main() {
-        float r, g, b, y, u, v;
+        float r,g,b;
+        vec3 yuv;
 
-        y = texture2D(samplerY, v_texCoord).r;
-        u = texture2D(samplerUV, v_texCoord).r - 0.5;
-        v = texture2D(samplerUV, v_texCoord).a - 0.5;
+        vec3 yuv2r = vec3(1.164, 0.0, 1.596);
+        vec3 yuv2g = vec3(1.164, -0.391, -0.813);
+        vec3 yuv2b = vec3(1.164, 2.018, 0.0);
 
+        yuv.x = texture2D(samplerY, v_texCoord).r - 0.0625;
+        yuv.y = texture2D(samplerUV, v_texCoord).r - 0.5;
+        yuv.z = texture2D(samplerUV, v_texCoord).a - 0.5;
 
-        r = y + 1.13983*v;
-        g = y - 0.39465*u - 0.58060*v;
-        b = y + 2.03211*u;
-
-        r = r * sContrastValue + sBrightnessValue;
-        g = g * sContrastValue + sBrightnessValue;
-        b = b * sContrastValue + sBrightnessValue;
+        r = dot(yuv, yuv2r);
+        g = dot(yuv, yuv2g);
+        b = dot(yuv, yuv2b);
 
         gl_FragColor = vec4(r, g, b, 1.0);
     }

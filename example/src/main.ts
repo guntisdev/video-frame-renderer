@@ -1,18 +1,5 @@
-import { Renderer, createRenderer } from "video-frame-renderer";
 import { getRawPixels, getRgbaPixels } from "./fetchImage";
-
-function createRendererList(count: number, container: HTMLDivElement) {
-    const rendererList: Renderer[] = [];
-    for (let i=0; i<count; i++) {
-        const canvas = document.createElement('canvas');
-        container.appendChild(canvas);
-        const rendererOrError = createRenderer(canvas);
-        if (rendererOrError instanceof Error) return rendererOrError;
-        rendererList.push(rendererOrError);
-    }
-
-    return rendererList;
-}
+import { createRendererList } from "./createRenderList";
 
 window.onload = () => {
     const appDiv: HTMLDivElement = document.querySelector('#app');
