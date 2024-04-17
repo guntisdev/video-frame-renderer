@@ -34,7 +34,7 @@ type RenderFrame = {
     layout?: PlaneLayout[];
 };
 
-declare function createRenderer(canvas: HTMLCanvasElement): Renderer | Error;
+function createRenderer(canvas: HTMLCanvasElement): Renderer | Error;
 ```
 
 ## Usage
