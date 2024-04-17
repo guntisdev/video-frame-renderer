@@ -16,3 +16,8 @@ export async function getRgbaPixels(
         }
     });
 }
+
+export function getRawPixels(url: string) {
+    return fetch(url)
+        .then(response => response.arrayBuffer());
+}

@@ -76,6 +76,12 @@ npm install video-frame-renderer
 npm run dev
 ```
 
+## Convert example image rgb to yuv
+```sh
+ffmpeg -i cat-rainbow.webp -pix_fmt yuv420p cat-rainbow-i420.yuv
+ffmpeg -i cat-rainbow.webp -pix_fmt nv12 cat-rainbow-nv12.yuv
+```
+
 ## GIT
 [https://github.com/guntisdev/video-frame-renderer](https://github.com/guntisdev/video-frame-renderer)
 
