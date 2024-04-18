@@ -21,7 +21,7 @@
     "url": "https://github.com/guntisdev/video-frame-renderer.git"
   },
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "type": "module",
   "module": "dist/createRenderer.js",
   "types": "dist/createRenderer.d.ts",
