@@ -24,7 +24,7 @@ export function createVideoFrameWebgl(gl: WebGLRenderingContext): GlRenderer | E
                 codedHeight: frame.codedHeight,
                 codedWidth: frame.codedWidth,
                 format: frame.format,
-                timestamp: frame.timestamp ?? 0,
+                timestamp: frame.timestamp || 0,
                 layout: frame.layout,
             });
 
